@@ -28,7 +28,7 @@ public class Peliculas {
 	
 	@OneToMany
 	@JoinColumn(name="pelicula_id")
-	private List<Peliculas> pelicula_id;
+	private List<Salas> salas;
 	
 	//Constructores
 	
@@ -67,13 +67,13 @@ public class Peliculas {
 	}
 
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Peliculas")
-	public List<Peliculas> getPeliculas_id() {
-		return pelicula_id;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pelicula_id")
+	public List<Salas> getPeliculas_id() {
+		return salas;
 	}
 
-	public void setPeliculas_id(List<Peliculas> pelicula_id) {
-		this.pelicula_id = pelicula_id;
+	public void setPeliculas_id(List<Salas> sala) {
+		this.salas = sala;
 	}
 	
 	
